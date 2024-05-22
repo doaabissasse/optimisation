@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de l'Optimisation de la Production</title>
+</head>
+<body>
+    <h1>Résultats de l'Optimisation de la Production</h1>
+    <table border="1">
+        <tr>
+            <th>Nom de l'équipement</th>
+            <th>Quantité produite</th>
+            <th>Coût de production</th>
+        </tr>
+        {% for item in optimized_production %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Coût total de production : {{ total_production_cost }}</p>
+</body>
+</html>
+
